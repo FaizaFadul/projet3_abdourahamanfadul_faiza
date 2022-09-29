@@ -1,0 +1,22 @@
+{
+  "name": "projet3_abdourahamanfadul",
+  "version": "1.0.0",
+  "description": "Projet Ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "ocr",
+    "cuisine"
+  ],
+  "author": "faiza abdou rahaman fadul",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "dependencies": {
+    "sass": "^1.55.0"
+  }
+}
