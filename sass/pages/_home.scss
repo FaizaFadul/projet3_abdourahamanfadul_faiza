@@ -1,0 +1,93 @@
+@use '../base/typography';
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+@use '../layout/header';
+@use '../layout/footer';
+@use '../components/list';
+@use '../components/searchbar';
+@use '../components/buttons';
+@use '../components/cards';
+
+.loader-container{
+    position: fixed;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background:$background-tertiary;
+    z-index: 3;
+    animation: container-show 10*$anim-duration backwards;
+}
+.loader{
+    visibility: hidden;
+    width: 72px;
+    height: 72px;
+    border: 8px dashed $background-primary;
+    border-radius: 50%;
+    animation: spinner $anim-duration 10 backwards;
+}
+
+#presentation{
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: $background-secondary;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+    >h1{
+        font-size: x-large;
+        margin-bottom: 5px;
+    }
+    >p{
+        font-size: large;
+        margin-top: 5px;
+    }
+}
+
+#fonctionnement{
+    background-color: $background-primary;
+    padding: 15px;
+}
+
+#restaurant{
+    background-color: $background-secondary;
+    padding: 15px;
+}
+
+@keyframes spinner {
+    0%{
+        visibility: visible;
+        transform: rotate(0deg); 
+        border-color: $background-primary;
+    }
+    25%{
+        border-color: $brand-primary;
+    }
+    50%{
+        border-color: $brand-secondary;
+        border-style: solid;
+    }
+    75%{
+        border-color: $brand-primary;
+    }
+    100%{
+        visibility: visible;
+        border-color: $background-primary;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes container-show {
+    0%{
+        visibility: visible;
+    }
+    100%{
+        visibility: visible;
+    }
+}

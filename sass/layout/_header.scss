@@ -1,0 +1,34 @@
+@use '../base/typography';
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.header{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    @include bottom-shadow;
+    z-index: 1;
+    &--backhome{
+        box-shadow: none;
+        a{
+            text-decoration: none;
+            position: absolute;
+            left: 5%;
+            font-size: x-large;
+            color: black;
+            &:hover{
+                text-decoration: none;
+            }
+            &:visited{
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.logo{
+    width: 150px;
+}

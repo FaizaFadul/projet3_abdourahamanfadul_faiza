@@ -1,0 +1,26 @@
+@use '../base/typography';
+@use '../utils/variables' as *;
+
+.search-container{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    background-color: $background-tertiary;
+    font-family: 'Roboto',sans-serif;
+    z-index: 0;
+}
+
+#city{
+    border: none;
+    font-weight: 700;
+    background: none;
+    width: 66%;
+    margin-left: 10px;
+    &::placeholder{
+        color: $search-color;
+    }
+}
+
+#city-icon{
+    color: $search-color;
+}

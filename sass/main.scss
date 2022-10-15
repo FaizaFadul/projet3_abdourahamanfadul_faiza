@@ -1,6 +1,22 @@
+@use 'base/typography';
+@use 'utils/variables';
+@use 'utils/mixins';
+@use 'components/list';
+@use 'layout/header';
+@use 'layout/footer';
+@use 'layout/course';
+@use 'components/searchbar';
+@use 'components/buttons';
+@use 'components/cards';
+@use 'pages/home';
+@use 'pages/restaurant';
+
 body{
-    color:blue;
-    &_block{
-        background-color: red;
-    }
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

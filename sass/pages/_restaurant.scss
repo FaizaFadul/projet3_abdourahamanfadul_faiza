@@ -1,0 +1,83 @@
+@use '../base/typography';
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+@use '../layout/header';
+@use '../layout/footer';
+@use '../layout/course';
+@use '../components/list';
+@use '../components/searchbar';
+@use '../components/buttons';
+@use '../components/cards';
+
+.restaurant-body{
+    background-color: $background-secondary;
+}
+
+
+
+.menu{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+    background-color: $background-secondary;
+    border-radius: 50px 50px 0px 0px;
+    position: relative;
+    z-index: 1;
+    top: -50px;
+    margin-bottom: -20px;
+    &__image{
+        width: 100%;
+        z-index: 0;
+    }
+
+    &__name{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .fav-icon{
+            position: relative;
+            &:hover{
+                cursor:pointer;
+            }
+            .fa-regular.fa-heart{
+                font-size: xx-large;
+                &::after{
+                    content: "\f004";
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    width: 0%;
+                    @include fav-background;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    transition-property: width, font-weight;
+                    transition-duration: $anim-duration;
+                }
+            }
+        }
+    }
+
+    h1{
+        font-family: 'Shrikhand';
+    }
+
+    form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+}
+
+input[type=checkbox]{
+    display: none;
+    &:checked + .fav-icon {
+        .fa-regular.fa-heart{
+            &::after{
+                width: 32px;
+                font-weight: 900;
+            }
+        }
+    }
+}

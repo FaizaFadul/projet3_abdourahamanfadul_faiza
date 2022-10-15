@@ -1,0 +1,149 @@
+@use '../base/typography';
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+@use '../components/list';
+
+.course{
+    width: 100%;
+    border: none;
+    padding: 0px;
+    margin-bottom: 20px;
+    min-width: 0;
+    text-overflow: ellipsis;
+    &__name{
+    text-transform: uppercase;
+    background-image: linear-gradient($brand-tertiary,$brand-tertiary);
+    background-position: bottom left;
+    background-size: 60% 3px;
+    background-repeat: no-repeat;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    }
+}
+
+.recipe-container{
+    display: flex;
+    background-color: $background-primary;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    @include bottom-shadow;
+    justify-content: space-between;
+    align-items: flex-end;
+    overflow: hidden;
+    height: 70px;
+    opacity: 0;
+    animation: recipe-slide-up 750ms forwards;
+    @for $i from 1 through $recipe-counter{
+        &:nth-child(#{($i*2)+3}) {
+            animation-delay: #{$i * 150}ms;
+        }
+    }
+    &__checkbox{
+        display: none;
+        width: 0%;
+        transition: width $anim-duration;
+    }
+    &:hover{
+        cursor:pointer;
+    }
+    div{
+        height: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    &__name{
+        width: 80%;
+        margin-left: 10px;
+        margin-left: 10px;
+        transition-property: width;
+        transition-duration: $anim-duration;
+        h2{
+            font-size: large;
+            margin-top: 0px;
+            margin-bottom: 5px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        p{
+            font-size: 15px;
+            margin-top: 5px;
+            margin-bottom: 0px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        
+    }
+    &__rate{
+        font-size: small;
+        font-weight: 700;
+        margin-right: 10px;
+        p{
+        margin-top: 40px;
+        }
+    }
+    i{
+        transition: transform $anim-duration 50ms;
+    }
+}
+
+input[type=checkbox]{
+    display: none;
+    &:checked + .recipe-container {
+        > .recipe-container__name{
+            width: 60%;
+        }
+        > .recipe-container__checkbox{
+            display: inline-flex;
+            height: inherit;
+            transform-origin: right;
+            background-color: #99E2D0;
+            align-items: center;
+            justify-content: center;
+            font-size: x-large;
+            color: #FFFFFF;
+            overflow: hidden;
+            width: 20%;
+            i{
+                animation: icon-rotate $anim-duration forwards 50ms;
+            }
+        }
+    }
+    &:not(:checked) + .recipe-container {
+        > .recipe-container__name{
+            width:80%;
+        }
+        > .recipe-container__checkbox{
+            display: inline-flex;
+            height: inherit;
+            transform-origin: right;
+            background-color: #99E2D0;
+            align-items: center;
+            justify-content: center;
+            font-size: x-large;
+            color: #FFFFFF;
+            overflow: hidden;
+        }
+    }
+}
+
+@keyframes recipe-slide-up{
+    0%{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes icon-rotate {
+    0%{
+        transform: rotate(0deg) ;
+    }
+    100%{
+        transform: rotate(360deg) ;
+    }
+}

@@ -1,0 +1,36 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.btn-main{
+    @include button-background;
+    @include bottom-shadow;
+    min-width: 50%;
+    border: none;
+    color: $background-primary;
+    padding: 15px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+    &::after{
+        content: " ";
+        display: inline-flex;
+        position: absolute;        
+        top: 0;        
+        right: 0;        
+        bottom: 0;        
+        left: 0;
+        border-radius: 30px;     
+        @include button-background-hover;
+        @include bottom-shadow-hover;        
+        opacity: 0;        
+        z-index: -1;
+        transition:opacity $anim-duration;
+    }
+    &:hover{
+        cursor: pointer;
+        &::after{
+            opacity: 1;
+        }
+    }
+}

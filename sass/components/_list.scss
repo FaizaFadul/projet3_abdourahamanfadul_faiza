@@ -1,0 +1,57 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+#how-to{
+    list-style: none;
+    counter-reset: list-position;
+    padding-left: 15px;
+    padding-right: 5px;
+}
+
+#how-to li {
+    counter-increment: list-position;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: $background-secondary;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    @include bottom-shadow;
+    &:hover{
+        background-color: $brand-primary-hover;
+        >.list-icon{
+            color: $brand-primary;
+        }
+    }
+    &::before {
+        content: counter(list-position);
+        padding: 5px 10px;
+        border-radius: 20px;
+        position: relative;
+        right: 30px;
+        background-color: $brand-primary;
+        color: $background-primary;
+    }
+
+    >.list-icon{
+        position: relative;
+        right: 15px;
+        color: grey;
+    }
+  }
+
+  footer ul{
+    list-style: none;
+    padding-left: 0px;
+    font-size: small;
+    li{
+        margin-bottom: 5px;
+    }
+    .fa-solid{
+        padding-right: 10px;
+    }
+    .fa-handshake-angle{
+        font-size: x-small;
+    }
+  }

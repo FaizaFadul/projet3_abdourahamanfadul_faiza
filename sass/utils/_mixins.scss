@@ -1,0 +1,26 @@
+@use './variables' as *;
+
+@mixin button-background {
+    background: linear-gradient($brand-secondary,$brand-primary);
+}
+
+@mixin button-background-hover {
+    background: linear-gradient($brand-secondary,$brand-primary);
+    filter: brightness(110%);
+}
+
+@mixin loader-background {
+    border-color: linear-gradient($brand-secondary,$brand-primary);
+}
+
+@mixin fav-background {
+    background: linear-gradient($brand-primary,$brand-secondary);
+}
+
+@mixin bottom-shadow{
+    box-shadow: 0px 5px 10px lightgrey;
+}
+
+@mixin bottom-shadow-hover{
+    box-shadow: 0px 5px 10px rgb(140, 140, 140);
+}
