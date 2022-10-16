@@ -6,6 +6,10 @@ footer{
     padding: 15px;
     background: $background-footer;
     color: $background-secondary;
+    @media (min-width: 768px) {
+        padding-left: 40px;
+        padding-right: 0px;
+    }
     h2{
         font-family: 'Shrikhand';
         font-size: medium;
@@ -16,6 +20,14 @@ footer{
         color: $background-secondary;
         &:visited{
             text-decoration: none;
+        }
+    }
+    ul{
+        @media (min-width: 768px) {
+            display: flex;
+            width: 90%;
+            justify-content: space-between;
+            margin-top: 0px;
         }
     }
 }

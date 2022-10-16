@@ -18,6 +18,10 @@
     background-repeat: no-repeat;
     padding-bottom: 8px;
     margin-bottom: 15px;
+    @media (min-width: 768px) {
+        margin-left: 10px;
+        margin-bottom: 0px;
+    }
     }
 }
 
@@ -37,6 +41,9 @@
         &:nth-child(#{($i*2)+3}) {
             animation-delay: #{$i * 150}ms;
         }
+    }
+    @media (min-width: 768px) {
+        margin: 10px;
     }
     &__checkbox{
         display: none;
@@ -64,6 +71,9 @@
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
+            @media (min-width: 768px) {
+                font-size: medium;
+            }
         }
         p{
             font-size: 15px;
@@ -72,6 +82,9 @@
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
+            @media (min-width: 768px) {
+                font-size: small;
+            }
         }
         
     }

@@ -76,6 +76,7 @@ footer ul .fa-handshake-angle {
 }
 
 .header {
+  box-sizing: border-box;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -84,6 +85,11 @@ footer ul .fa-handshake-angle {
   padding-bottom: 15px;
   box-shadow: 0px 5px 10px lightgrey;
   z-index: 1;
+}
+@media (min-width: 768px) {
+  .header {
+    display: none;
+  }
 }
 .header--backhome {
   box-shadow: none;
@@ -101,6 +107,47 @@ footer ul .fa-handshake-angle {
 .header--backhome a:visited {
   text-decoration: none;
 }
+.header__desktop {
+  display: none;
+}
+.header__desktop--backhome {
+  display: none;
+}
+@media (min-width: 768px) {
+  .header__desktop {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    padding-left: 25px;
+    box-shadow: 0px 5px 10px lightgrey;
+    z-index: 1;
+  }
+  .header__desktop--backhome {
+    display: flex;
+    box-shadow: none;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  .header__desktop--backhome a {
+    text-decoration: none;
+    position: absolute;
+    left: 5%;
+    font-size: x-large;
+    color: black;
+  }
+  .header__desktop--backhome a:hover {
+    text-decoration: none;
+  }
+  .header__desktop--backhome a:visited {
+    text-decoration: none;
+  }
+}
 
 .logo {
   width: 150px;
@@ -110,6 +157,12 @@ footer {
   padding: 15px;
   background: rgb(62, 62, 62);
   color: #F6F6F6;
+}
+@media (min-width: 768px) {
+  footer {
+    padding-left: 40px;
+    padding-right: 0px;
+  }
 }
 footer h2 {
   font-family: "Shrikhand";
@@ -122,6 +175,14 @@ footer a {
 }
 footer a:visited {
   text-decoration: none;
+}
+@media (min-width: 768px) {
+  footer ul {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    margin-top: 0px;
+  }
 }
 
 .course {
@@ -140,6 +201,12 @@ footer a:visited {
   background-repeat: no-repeat;
   padding-bottom: 8px;
   margin-bottom: 15px;
+}
+@media (min-width: 768px) {
+  .course__name {
+    margin-left: 10px;
+    margin-bottom: 0px;
+  }
 }
 
 .recipe-container {
@@ -166,6 +233,11 @@ footer a:visited {
 }
 .recipe-container:nth-child(11) {
   animation-delay: 600ms;
+}
+@media (min-width: 768px) {
+  .recipe-container {
+    margin: 10px;
+  }
 }
 .recipe-container__checkbox {
   display: none;
@@ -195,6 +267,11 @@ footer a:visited {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+@media (min-width: 768px) {
+  .recipe-container__name h2 {
+    font-size: medium;
+  }
+}
 .recipe-container__name p {
   font-size: 15px;
   margin-top: 5px;
@@ -202,6 +279,11 @@ footer a:visited {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+@media (min-width: 768px) {
+  .recipe-container__name p {
+    font-size: small;
+  }
 }
 .recipe-container__rate {
   font-size: small;
@@ -275,7 +357,32 @@ input[type=checkbox]:not(:checked) + .recipe-container > .recipe-container__chec
   justify-content: center;
   background-color: #EAEAEA;
   font-family: "Roboto", sans-serif;
+  padding-left: 9px;
   z-index: 0;
+}
+@media (min-width: 768px) {
+  .search-container {
+    display: none;
+  }
+}
+.search-container__desktop {
+  display: none;
+}
+@media (min-width: 768px) {
+  .search-container__desktop {
+    display: flex;
+    width: fit-content;
+    min-width: 20%;
+    justify-content: center;
+    background-color: #EAEAEA;
+    font-family: "Roboto", sans-serif;
+    z-index: 1;
+    padding-left: 10px;
+    border-radius: 30px 0px 0px 30px;
+  }
+  .search-container__desktop__content {
+    width: 90%;
+  }
 }
 
 #city {
@@ -304,6 +411,11 @@ input[type=checkbox]:not(:checked) + .recipe-container > .recipe-container__chec
   margin-bottom: 20px;
   position: relative;
   z-index: 1;
+}
+@media (min-width: 768px) {
+  .btn-main {
+    min-width: 20%;
+  }
 }
 .btn-main::after {
   content: " ";
@@ -349,6 +461,11 @@ input[type=checkbox]:not(:checked) + .recipe-container > .recipe-container__chec
   display: flex;
   justify-content: center;
   text-decoration: none;
+}
+@media (min-width: 768px) {
+  .card__link {
+    width: 47%;
+  }
 }
 .card__tag {
   margin-top: 0px;
@@ -424,10 +541,6 @@ input[type=checkbox]:not(:checked) + .recipe-container > .recipe-container__chec
   transition-duration: 300ms;
 }
 
-/*Style au survol de la card
-.general-card:hover{
-    background-color: #F2F2F2;
-}*/
 input[type=checkbox] {
   display: none;
 }
@@ -470,6 +583,29 @@ input[type=checkbox]:checked + .fav-icon-home .fa-regular.fa-heart::after {
   align-items: center;
   padding: 20px;
 }
+@media (min-width: 768px) {
+  #presentation {
+    display: none;
+  }
+}
+#presentation__desktop {
+  display: none;
+}
+@media (min-width: 768px) {
+  #presentation__desktop {
+    box-sizing: border-box;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #FFFFFF;
+    text-align: left;
+    padding: 20px;
+  }
+  #presentation__desktop > h1 {
+    margin-bottom: 0px;
+  }
+}
 #presentation > h1 {
   font-size: x-large;
   margin-bottom: 5px;
@@ -483,10 +619,47 @@ input[type=checkbox]:checked + .fav-icon-home .fa-regular.fa-heart::after {
   background-color: #FFFFFF;
   padding: 15px;
 }
+@media (min-width: 768px) {
+  #fonctionnement {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  #fonctionnement__desktop {
+    width: 50%;
+    background-color: #FFFFFF;
+    padding: 15px;
+  }
+  #fonctionnement__desktop h2 {
+    display: none;
+  }
+}
+
+#intro__desktop {
+  display: none;
+}
+@media (min-width: 768px) {
+  #intro__desktop {
+    display: flex;
+    padding-left: 5px;
+    padding-right: 10px;
+  }
+}
 
 #restaurant {
   background-color: #F6F6F6;
   padding: 15px;
+}
+@media (min-width: 768px) {
+  #restaurant {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+#restaurant__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 @keyframes spinner {
@@ -534,14 +707,31 @@ input[type=checkbox]:checked + .fav-icon-home .fa-regular.fa-heart::after {
   top: -50px;
   margin-bottom: -20px;
 }
+@media (min-width: 768px) {
+  .menu {
+    padding-bottom: 0px;
+  }
+}
 .menu__image {
   width: 100%;
   z-index: 0;
+}
+@media (min-width: 768px) {
+  .menu__image {
+    height: 200px;
+    object-fit: cover;
+  }
 }
 .menu__name {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media (min-width: 768px) {
+  .menu__name {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 .menu__name .fav-icon {
   position: relative;
@@ -573,6 +763,11 @@ input[type=checkbox]:checked + .fav-icon-home .fa-regular.fa-heart::after {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (min-width: 768px) {
+  .menu form.menu__list {
+    flex-direction: row;
+  }
 }
 
 input[type=checkbox] {

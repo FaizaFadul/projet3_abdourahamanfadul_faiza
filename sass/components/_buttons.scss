@@ -12,6 +12,9 @@
     margin-bottom: 20px;
     position: relative;
     z-index: 1;
+    @media (min-width: 768px) {
+        min-width: 20%;
+    }
     &::after{
         content: " ";
         display: inline-flex;

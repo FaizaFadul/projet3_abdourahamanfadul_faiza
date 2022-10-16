@@ -3,6 +3,7 @@
 @use '../utils/mixins' as *;
 
 .header{
+    box-sizing: border-box;
     width: 100%;
     display: flex;
     justify-content:center;
@@ -11,6 +12,9 @@
     padding-bottom: 15px;
     @include bottom-shadow;
     z-index: 1;
+    @media (min-width: 768px) {
+        display: none;
+    }
     &--backhome{
         box-shadow: none;
         a{
@@ -24,6 +28,45 @@
             }
             &:visited{
                 text-decoration: none;
+            }
+        }
+    }
+    &__desktop{
+        display: none;
+        &--backhome{
+            display: none;
+        }
+        @media (min-width: 768px) {
+            box-sizing: border-box;
+            width: 100%;
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+            padding-bottom: 0px;
+            padding-top: 0px;
+            padding-left: 25px;
+            @include bottom-shadow;
+            z-index: 1;
+            &--backhome{
+                display: flex;
+                box-shadow: none;
+                padding-bottom: 10px;
+                padding-top: 10px;
+                justify-content:center;
+                align-items: center;
+                a{
+                    text-decoration: none;
+                    position: absolute;
+                    left: 5%;
+                    font-size: x-large;
+                    color: black;
+                    &:hover{
+                        text-decoration: none;
+                    }
+                    &:visited{
+                        text-decoration: none;
+                    }
+                }
             }
         }
     }
