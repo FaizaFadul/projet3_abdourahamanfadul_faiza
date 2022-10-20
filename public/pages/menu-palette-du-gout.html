@@ -1,15 +1,160 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/normalize.css">
+        <link rel="stylesheet" href="../css/prefixed/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <title>La palette du goût</title>
+    </head>
+    <body class="restaurant-body">
+        <header class="header header--backhome">
+            <a href="../../index.html"><i class="fa-solid fa-arrow-left-long"></i></a>
+            <img src="../images/logo/ohmyfood.png" alt="Logo Ohmyfood!" class="logo">
+        </header>
+        <header class="header__desktop--backhome">
+            <a href="../../index.html"><i class="fa-solid fa-arrow-left-long"></i></a>
+            <img src="../images/logo/ohmyfood.png" alt="Logo Ohmyfood!" class="logo">
+        </header>
+        <div>
+            <img src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" class="menu__image" alt="Photo d'une table du restaurant La palette du goût">
+        </div>
+        <section class="menu">
+            <div class="menu__name">
+                <h1>La palette du goût</h1>
+                <input type="checkbox" name="fav" id="fav">
+                <label class="fav-icon" for="fav">
+                    <i class="fa-regular fa-heart"></i>
+                </label>
+            </div>
+            <form action="#" class="menu__list">
+                <fieldset class="course">
+                    <legend class="course__name">ENTRÉES</legend>
+                    <input type="checkbox" name="fricasse-escargot" id="fricasse-escargot">
+                    <label class="recipe-container" for="fricasse-escargot">
+                            <span class="recipe-container__name">
+                                <span class="recipe-container__name__title">Fricassée d'escargot</span>
+                                <span class="recipe-container__name__precision">Au piment d'Espelette</span>
+                            </span>
+                            <span class="recipe-container__rate">25€</span>
+                            <span class="recipe-container__checkbox">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </span>
+                    </label>
+                    <input type="checkbox" name="foie-gras" id="foie-gras">
+                    <label class="recipe-container" for="foie-gras">
+                        <span class="recipe-container__name">
+                            <span class="recipe-container__name__title">Foie gras de canard mi-cuit</span>
+                            <span class="recipe-container__name__precision">Et ses copeaux de truffe noire</span>
+                        </span>
+                        <span class="recipe-container__rate">35€</span>
+                        <span class="recipe-container__checkbox">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </span>
+                    </label>
+                    <input type="checkbox" name="oeuf-plat" id="oeuf-plat">
+                    <label class="recipe-container" for="oeuf-plat">
+                        <span class="recipe-container__name">
+                            <span class="recipe-container__name__title">Oeuf au plat</span>
+                            <span class="recipe-container__name__precision">Assaisonné à la truffe sur lit de caviar</span>
+                        </span>
+                        <span class="recipe-container__rate">20€</span>
+                        <span class="recipe-container__checkbox">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </span>
+                    </label>
+                </fieldset>
+
+                <fieldset class="course">
+                    <legend class="course__name">Plats</legend>
+                    <input type="checkbox" name="filet-boeuf" id="filet-boeuf">
+                    <label class="recipe-container" for="filet-boeuf">
+                        <span class="recipe-container__name">
+                            <span class="recipe-container__name__title">Filet de boeuf aux herbes</span>
+                            <span class="recipe-container__name__precision">Accompagné de sa ribambelle de légumes</span>
+                        </span>
+                        <span class="recipe-container__rate">40€</span>
+                        <span class="recipe-container__checkbox">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </span>
+                    </label>
+                    <input type="checkbox" name="parmentier-boeuf" id="parmentier-boeuf">
+                    <label class="recipe-container" for="parmentier-boeuf">
+                        <span class="recipe-container__name">
+                            <span class="recipe-container__name__title">Parmentier de queue de boeuf</span>
+                            <span class="recipe-container__name__precision">À la truffe noire sur sa purée de panais</span>
+                        </span>
+                        <span class="recipe-container__rate">35€</span>
+                        <span class="recipe-container__checkbox">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </span>
+                    </label>
+                    <input type="checkbox" name="filet-turbot" id="filet-turbot">
+                    <label class="recipe-container" for="filet-turbot">
+                        <span class="recipe-container__name">
+                            <span class="recipe-container__name__title">Filet de turbot</span>
+                            <span class="recipe-container__name__precision">Aux agrumes</span>
+                        </span>
+                        <span class="recipe-container__rate">44€</span>
+                        <span class="recipe-container__checkbox">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </span>
+                    </label>
+                </fieldset>
+
+                <fieldset class="course">
+                    <legend class="course__name">Desserts</legend>
+                    <input type="checkbox" name="paris-brest" id="paris-brest">
+                    <label class="recipe-container" for="paris-brest">
+                        <span class="recipe-container__name">
+                            <span class="recipe-container__name__title">Paris-Brest</span>
+                            <span class="recipe-container__name__precision">Revisité</span>
+                        </span>
+                        <span class="recipe-container__rate">18€</span>
+                        <span class="recipe-container__checkbox">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </span>
+                    </label>
+                    <input type="checkbox" name="macaron-chocolat" id="macaron-chocolat">
+                    <label class="recipe-container" for="macaron-chocolat">
+                        <span class="recipe-container__name">
+                            <span class="recipe-container__name__title">Macaron au chocolat d'exception</span>
+                            <span class="recipe-container__name__precision">Et glace à la vanille de Madagascar</span>
+                        </span>
+                        <span class="recipe-container__rate">22€</span>
+                        <span class="recipe-container__checkbox">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </span>
+                    </label>
+                    <input type="checkbox" name="mousse-chocolat" id="mousse-chocolat">
+                    <label class="recipe-container" for="mousse-chocolat">
+                        <span class="recipe-container__name">
+                            <span class="recipe-container__name__title">Mousse au chocolat</span>
+                            <span class="recipe-container__name__precision">Au piment d'Espelette et à la truffe noire</span>
+                        </span>
+                        <span class="recipe-container__rate">23€</span>
+                        <span class="recipe-container__checkbox">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </span>
+                    </label>
+                </fieldset>
+            </form>
+            <form action="#">
+                <button class="btn-main">Commander</button>
+            </form>
+        </section>
+        <footer>
+            <h2>Ohmyfood</h2>
+            <nav>
+                <ul>
+                    <li><span><i class="fa-solid fa-utensils"></i></span>Proposer un restaurant</li>
+                    <li><span><i class="fa-solid fa-handshake-angle"></i></span>Devenir partenaire</li>
+                    <li>Mentions légales</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+        </footer>
+    </body>
 </html>

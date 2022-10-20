@@ -59,34 +59,14 @@
         margin-bottom: auto;
     }
     &__name{
+        display: flex;
+        flex-direction: column;
         width: 80%;
         margin-left: 10px;
         margin-top: auto;
         margin-bottom: auto;
         transition-property: width;
         transition-duration: $anim-duration;
-        h2{
-            font-size: large;
-            margin-top: 0px;
-            margin-bottom: 5px;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            @media (min-width: 768px) {
-                font-size: medium;
-            }
-        }
-        p{
-            font-size: 15px;
-            margin-top: 5px;
-            margin-bottom: 0px;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            @media (min-width: 768px) {
-                font-size: small;
-            }
-        }
         &__title{
             font-size: large;
             font-weight: 700;
@@ -101,7 +81,7 @@
         }
         &__precision{
             font-size: 15px;
-            margin-top: 5px;
+            margin-top: 0px;
             margin-bottom: 0px;
             overflow: hidden;
             white-space: nowrap;

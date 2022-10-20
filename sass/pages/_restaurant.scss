@@ -30,10 +30,11 @@
     }
     &__image{
         width: 100%;
+        height: 300px;
+        object-fit: cover;
         z-index: 0;
         @media (min-width: 768px) {
             height: 200px;
-            object-fit: cover;
         }
     }
 
@@ -72,6 +73,7 @@
 
     h1{
         font-family: 'Shrikhand';
+        font-size: x-large;
     }
 
     form{
@@ -81,6 +83,7 @@
         &.menu__list{
             @media (min-width: 768px) {
                 flex-direction: row;
+                align-items: flex-start;
             }
         }
     }

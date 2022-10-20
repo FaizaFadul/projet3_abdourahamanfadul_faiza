@@ -1,15 +1,160 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/normalize.css">
+        <link rel="stylesheet" href="../css/prefixed/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <title>Le délice des sens</title>
+    </head>
+    <body class="restaurant-body">
+        <header class="header header--backhome">
+            <a href="../../index.html"><i class="fa-solid fa-arrow-left-long"></i></a>
+            <img src="../images/logo/ohmyfood.png" alt="Logo Ohmyfood!" class="logo">
+        </header>
+        <header class="header__desktop--backhome">
+            <a href="../../index.html"><i class="fa-solid fa-arrow-left-long"></i></a>
+            <img src="../images/logo/ohmyfood.png" alt="Logo Ohmyfood!" class="logo">
+        </header>
+        <div>
+            <img src="../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" class="menu__image" alt="Photo d'une table du restaurant Le délice des sens">
+        </div>
+        <section class="menu">
+            <div class="menu__name">
+                <h1>Le délice des sens</h1>
+                <input type="checkbox" name="fav" id="fav">
+                <label class="fav-icon" for="fav">
+                    <i class="fa-regular fa-heart"></i>
+                </label>
+            </div>
+            <form action="#" class="menu__list">
+                <fieldset class="course">
+                    <legend class="course__name">ENTRÉES</legend>
+                    <input type="checkbox" name="tartare-thon" id="tartare-thon">
+                    <label class="recipe-container" for="tartare-thon">
+                            <span class="recipe-container__name">
+                                <span class="recipe-container__name__title">Tartare de thon</span>
+                                <span class="recipe-container__name__precision">Assaisonné au yuzu</span>
+                            </span>
+                            <span class="recipe-container__rate">25€</span>
+                            <span class="recipe-container__checkbox">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </span>
+                    </label>
+                    <input type="checkbox" name="bouchee-homard" id="bouchee-homard">
+                    <label class="recipe-container" for="bouchee-homard">
+                        <span class="recipe-container__name">
+                            <span class="recipe-container__name__title">Bouchée de homard croustillant</span>
+                            <span class="recipe-container__name__precision">Et sa farandole de petits légume</span>
+                        </span>
+                        <span class="recipe-container__rate">35€</span>
+                        <span class="recipe-container__checkbox">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </span>
+                    </label>
+                    <input type="checkbox" name="veloute-cepes" id="veloute-cepes">
+                    <label class="recipe-container" for="veloute-cepes">
+                        <span class="recipe-container__name">
+                            <span class="recipe-container__name__title">Velouté de cèpes</span>
+                            <span class="recipe-container__name__precision">Aux truffes</span>
+                        </span>
+                        <span class="recipe-container__rate">20€</span>
+                        <span class="recipe-container__checkbox">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </span>
+                    </label>
+                </fieldset>
+
+                <fieldset class="course">
+                    <legend class="course__name">Plats</legend>
+                    <input type="checkbox" name="poulet-roti" id="poulet-roti">
+                    <label class="recipe-container" for="poulet-roti">
+                        <span class="recipe-container__name">
+                            <span class="recipe-container__name__title">Poulet rôti aux herbes de Provence</span>
+                            <span class="recipe-container__name__precision">Et sa crème de truffe</span>
+                        </span>
+                        <span class="recipe-container__rate">40€</span>
+                        <span class="recipe-container__checkbox">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </span>
+                    </label>
+                    <input type="checkbox" name="langouste-rotie" id="langouste-rotie">
+                    <label class="recipe-container" for="langouste-rotie">
+                        <span class="recipe-container__name">
+                            <span class="recipe-container__name__title">Langouste rôtie</span>
+                            <span class="recipe-container__name__precision">Et ses légumes de saison</span>
+                        </span>
+                        <span class="recipe-container__rate">35€</span>
+                        <span class="recipe-container__checkbox">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </span>
+                    </label>
+                    <input type="checkbox" name="cote-boeuf" id="cote-boeuf">
+                    <label class="recipe-container" for="cote-boeuf">
+                        <span class="recipe-container__name">
+                            <span class="recipe-container__name__title">Côte de boeuf Angus</span>
+                            <span class="recipe-container__name__precision">Et sa purée de panais</span>
+                        </span>
+                        <span class="recipe-container__rate">44€</span>
+                        <span class="recipe-container__checkbox">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </span>
+                    </label>
+                </fieldset>
+
+                <fieldset class="course">
+                    <legend class="course__name">Desserts</legend>
+                    <input type="checkbox" name="farandole-desserts" id="farandole-desserts">
+                    <label class="recipe-container" for="farandole-desserts">
+                        <span class="recipe-container__name">
+                            <span class="recipe-container__name__title">Farandole de desserts</span>
+                            <span class="recipe-container__name__precision">Du chef</span>
+                        </span>
+                        <span class="recipe-container__rate">18€</span>
+                        <span class="recipe-container__checkbox">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </span>
+                    </label>
+                    <input type="checkbox" name="creme-brulee" id="creme-brulee">
+                    <label class="recipe-container" for="creme-brulee">
+                        <span class="recipe-container__name">
+                            <span class="recipe-container__name__title">Crème brulée</span>
+                            <span class="recipe-container__name__precision">Revisité</span>
+                        </span>
+                        <span class="recipe-container__rate">22€</span>
+                        <span class="recipe-container__checkbox">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </span>
+                    </label>
+                    <input type="checkbox" name="tiramisu" id="tiramisu">
+                    <label class="recipe-container" for="tiramisu">
+                        <span class="recipe-container__name">
+                            <span class="recipe-container__name__title">Tiramisu</span>
+                            <span class="recipe-container__name__precision">À la noisette</span>
+                        </span>
+                        <span class="recipe-container__rate">23€</span>
+                        <span class="recipe-container__checkbox">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </span>
+                    </label>
+                </fieldset>
+            </form>
+            <form action="#">
+                <button class="btn-main">Commander</button>
+            </form>
+        </section>
+        <footer>
+            <h2>Ohmyfood</h2>
+            <nav>
+                <ul>
+                    <li><span><i class="fa-solid fa-utensils"></i></span>Proposer un restaurant</li>
+                    <li><span><i class="fa-solid fa-handshake-angle"></i></span>Devenir partenaire</li>
+                    <li>Mentions légales</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+        </footer>
+    </body>
 </html>

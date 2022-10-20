@@ -253,38 +253,14 @@ footer a:visited {
   margin-bottom: auto;
 }
 .recipe-container__name {
+  display: flex;
+  flex-direction: column;
   width: 80%;
   margin-left: 10px;
   margin-top: auto;
   margin-bottom: auto;
   transition-property: width;
   transition-duration: 300ms;
-}
-.recipe-container__name h2 {
-  font-size: large;
-  margin-top: 0px;
-  margin-bottom: 5px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-@media (min-width: 768px) {
-  .recipe-container__name h2 {
-    font-size: medium;
-  }
-}
-.recipe-container__name p {
-  font-size: 15px;
-  margin-top: 5px;
-  margin-bottom: 0px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-@media (min-width: 768px) {
-  .recipe-container__name p {
-    font-size: small;
-  }
 }
 .recipe-container__name__title {
   font-size: large;
@@ -302,7 +278,7 @@ footer a:visited {
 }
 .recipe-container__name__precision {
   font-size: 15px;
-  margin-top: 5px;
+  margin-top: 0px;
   margin-bottom: 0px;
   overflow: hidden;
   white-space: nowrap;
@@ -753,12 +729,13 @@ input[type=checkbox]:checked + .fav-icon-home .fa-regular.fa-heart::after {
 }
 .menu__image {
   width: 100%;
+  height: 300px;
+  object-fit: cover;
   z-index: 0;
 }
 @media (min-width: 768px) {
   .menu__image {
     height: 200px;
-    object-fit: cover;
   }
 }
 .menu__name {
@@ -797,6 +774,7 @@ input[type=checkbox]:checked + .fav-icon-home .fa-regular.fa-heart::after {
 }
 .menu h1 {
   font-family: "Shrikhand";
+  font-size: x-large;
 }
 .menu form {
   display: flex;
@@ -806,6 +784,7 @@ input[type=checkbox]:checked + .fav-icon-home .fa-regular.fa-heart::after {
 @media (min-width: 768px) {
   .menu form.menu__list {
     flex-direction: row;
+    align-items: flex-start;
   }
 }
 
