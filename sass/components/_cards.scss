@@ -108,6 +108,7 @@
                 right: 0;
                 width: 0%;
                 @include fav-background;
+                background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 transition-property: width, font-weight;
