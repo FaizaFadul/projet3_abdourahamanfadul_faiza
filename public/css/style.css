@@ -527,7 +527,7 @@ i.fa-solid.fa-location-dot {
   font-size: x-large;
   position: relative;
   top: 70%;
-  right: 10%;
+  right: 15%;
   width: 0px;
 }
 .fav-icon__container .fav-icon-home {
@@ -767,6 +767,7 @@ input[type=checkbox]:checked + .fav-icon-home .fa-regular.fa-heart::after {
   right: 0;
   width: 0%;
   background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition-property: width, font-weight;
