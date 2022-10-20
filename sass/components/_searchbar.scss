@@ -3,6 +3,7 @@
 
 .search-container{
     width: 100%;
+    box-sizing: border-box;
     display: flex;
     justify-content:center;
     background-color: $background-tertiary;
@@ -40,8 +41,15 @@
     &::placeholder{
         color: $search-color;
     }
+    &__desktop{
+        border: none;
+        font-weight: 700;
+        background: none;
+        width: 66%;
+        margin-left: 10px;
+    }
 }
 
-#city-icon{
+i.fa-solid.fa-location-dot{
     color: $search-color;
 }

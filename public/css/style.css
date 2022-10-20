@@ -255,7 +255,8 @@ footer a:visited {
 .recipe-container__name {
   width: 80%;
   margin-left: 10px;
-  margin-left: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
   transition-property: width;
   transition-duration: 300ms;
 }
@@ -285,10 +286,39 @@ footer a:visited {
     font-size: small;
   }
 }
+.recipe-container__name__title {
+  font-size: large;
+  font-weight: 700;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+@media (min-width: 768px) {
+  .recipe-container__name__title {
+    font-size: medium;
+  }
+}
+.recipe-container__name__precision {
+  font-size: 15px;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+@media (min-width: 768px) {
+  .recipe-container__name__precision {
+    font-size: small;
+  }
+}
 .recipe-container__rate {
   font-size: small;
   font-weight: 700;
   margin-right: 10px;
+  margin-top: 40px;
+  margin-bottom: 15px;
 }
 .recipe-container__rate p {
   margin-top: 40px;
@@ -353,6 +383,7 @@ input[type=checkbox]:not(:checked) + .recipe-container > .recipe-container__chec
 }
 .search-container {
   width: 100%;
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   background-color: #EAEAEA;
@@ -395,8 +426,15 @@ input[type=checkbox]:not(:checked) + .recipe-container > .recipe-container__chec
 #city::placeholder {
   color: rgb(75, 75, 75);
 }
+#city__desktop {
+  border: none;
+  font-weight: 700;
+  background: none;
+  width: 66%;
+  margin-left: 10px;
+}
 
-#city-icon {
+i.fa-solid.fa-location-dot {
   color: rgb(75, 75, 75);
 }
 
@@ -442,6 +480,16 @@ input[type=checkbox]:not(:checked) + .recipe-container > .recipe-container__chec
 
 /*Mise en page de la card*/
 .card {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .card {
+    width: 47%;
+  }
+}
+.card__link {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -454,18 +502,8 @@ input[type=checkbox]:not(:checked) + .recipe-container > .recipe-container__chec
   font-size: medium;
   color: black;
   overflow: hidden;
-  box-shadow: 0px 5px 10px lightgrey;
-}
-.card__link {
-  width: 100%;
-  display: flex;
-  justify-content: center;
   text-decoration: none;
-}
-@media (min-width: 768px) {
-  .card__link {
-    width: 47%;
-  }
+  box-shadow: 0px 5px 10px lightgrey;
 }
 .card__tag {
   margin-top: 0px;
@@ -507,26 +545,35 @@ input[type=checkbox]:not(:checked) + .recipe-container > .recipe-container__chec
   margin-bottom: 0px;
   font-size: medium;
 }
-.card .fav-icon-home {
+
+.fav-icon__container {
+  height: fit-content;
+  font-size: x-large;
+  position: relative;
+  top: 70%;
+  right: 10%;
+  width: 0px;
+}
+.fav-icon__container .fav-icon-home {
   position: relative;
   font-size: x-large;
   padding-right: 5px;
 }
-.card .fav-icon-home:hover {
+.fav-icon__container .fav-icon-home:hover {
   cursor: pointer;
 }
-.card .fav-icon-home .fa-regular.fa-heart {
+.fav-icon__container .fav-icon-home .fa-regular.fa-heart {
   font-size: x-large;
   margin-right: 15px;
 }
-.card .fav-icon-home .fa-regular.fa-heart::before {
+.fav-icon__container .fav-icon-home .fa-regular.fa-heart::before {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
 }
-.card .fav-icon-home .fa-regular.fa-heart::after {
+.fav-icon__container .fav-icon-home .fa-regular.fa-heart::after {
   content: "\f004";
   position: absolute;
   top: 0;
@@ -573,7 +620,22 @@ input[type=checkbox]:checked + .fav-icon-home .fa-regular.fa-heart::after {
   animation: spinner 300ms 10 backwards;
 }
 
-#presentation {
+#intro {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  #intro {
+    display: flex;
+    flex-direction: row;
+    padding-left: 5px;
+    padding-right: 10px;
+  }
+}
+
+.presentation {
   box-sizing: border-box;
   width: 100%;
   display: flex;
@@ -583,66 +645,43 @@ input[type=checkbox]:checked + .fav-icon-home .fa-regular.fa-heart::after {
   align-items: center;
   padding: 20px;
 }
-@media (min-width: 768px) {
-  #presentation {
-    display: none;
-  }
-}
-#presentation__desktop {
-  display: none;
-}
-@media (min-width: 768px) {
-  #presentation__desktop {
-    box-sizing: border-box;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #FFFFFF;
-    text-align: left;
-    padding: 20px;
-  }
-  #presentation__desktop > h1 {
-    margin-bottom: 0px;
-  }
-}
-#presentation > h1 {
+.presentation > h1 {
   font-size: x-large;
   margin-bottom: 5px;
 }
-#presentation > p {
+.presentation > p {
   font-size: large;
   margin-top: 5px;
 }
+@media (min-width: 768px) {
+  .presentation {
+    width: 50%;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #FFFFFF;
+    text-align: left;
+  }
+  .presentation > h1 {
+    font-size: xx-large;
+    margin-bottom: 0px;
+  }
+  .presentation > p {
+    font-size: medium;
+  }
+}
 
-#fonctionnement {
+.fonctionnement {
   background-color: #FFFFFF;
   padding: 15px;
 }
 @media (min-width: 768px) {
-  #fonctionnement {
-    display: none;
-  }
-}
-@media (min-width: 768px) {
-  #fonctionnement__desktop {
+  .fonctionnement {
     width: 50%;
     background-color: #FFFFFF;
     padding: 15px;
   }
-  #fonctionnement__desktop h2 {
+  .fonctionnement > h2 {
     display: none;
-  }
-}
-
-#intro__desktop {
-  display: none;
-}
-@media (min-width: 768px) {
-  #intro__desktop {
-    display: flex;
-    padding-left: 5px;
-    padding-right: 10px;
   }
 }
 
