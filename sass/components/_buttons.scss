@@ -4,6 +4,7 @@
 .btn-main{
     @include button-background;
     @include bottom-shadow;
+    text-decoration: none;
     min-width: 50%;
     border: none;
     color: $background-primary;
